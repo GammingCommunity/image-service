@@ -17,7 +17,7 @@ app.get('/fetch-image/:roomID',async(req,res)=>{
         .sort_by('public_id','desc')
         .execute().then((v)=>{
             return v.resources;
-        }).catch((err) => null);
+        }).catch((err) => []);
     
     for (const item of images) {
 
@@ -28,7 +28,6 @@ app.get('/fetch-image/:roomID',async(req,res)=>{
 })
 app.post('/chat-image/:roomID', multerUploads,async(req,res)=>{
     const roomID= req.params.roomID;
-    //const file = dataUri(req).content;
     var uploadResult = [];
     for (const item of req.files) {
         const file = dataUri(item).content;

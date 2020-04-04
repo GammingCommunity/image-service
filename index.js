@@ -9,7 +9,7 @@ require('dotenv').config();
 
 
 app.use(checkSession);
-app.get('/fetchImage/:roomID',async(req,res)=>{
+app.get('/fetch-image/:roomID',async(req,res)=>{
     var roomID = req.params.roomID;
     var url_ressult = [];
     var images = await cloudinary.search

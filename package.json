@@ -1,0 +1,19 @@
+{
+  "name": "image-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/GammingCommnunity/image-service.git",
+  "author": "Mattstacey <dhpro1998@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cloudinary": "^1.21.0",
+    "cross-fetch": "^3.0.4",
+    "datauri": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  }
+}

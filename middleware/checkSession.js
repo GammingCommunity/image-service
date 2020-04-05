@@ -14,7 +14,8 @@ module.exports = async (req, res, next) => {
         });
     }
     else {
-
+        console.log(req.headers.token);
+        
         const response = await fetch(authUrl,{
             method:"GET",
             headers: {
@@ -25,7 +26,8 @@ module.exports = async (req, res, next) => {
         });
 
         //if(link.stats)
-    
+        console.log(response);
+        
         if (response.status != 200) {
             res.status(403).send({
                 success: false,

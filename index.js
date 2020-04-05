@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 require('dotenv').config();
 
 
-app.use(checkSession);
+//app.use(checkSession);
 app.get('/fetch-image/:roomID',async(req,res)=>{
     var roomID = req.params.roomID;
     var url_ressult = [];

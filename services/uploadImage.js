@@ -6,9 +6,14 @@ const uploadImage= async (file,roomID)=>{
         tags: roomID,
         folder: "group-media/" + roomID,
     }).then((result) => {
-
+        
         resultUrl = result.url;
-        return resultUrl;
+        return {
+            "url": resultUrl,
+            "height":result.height,
+            "width":result.width,
+
+        };
     })
 }
 module.exports = uploadImage;

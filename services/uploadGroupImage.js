@@ -1,10 +1,12 @@
 const { uploader } = require('cloudinary').v2;
 
-const uploadImage= async (file,roomID,type)=>{
+const uploadGroupImage = async (file, roomID, type) => {
+    console.log(type);
+    
     var resultUrl = '';
     return uploader.upload(file, {
         tags: roomID,
-        folder: "group-media/" + roomID,
+        folder: "group-profile/" + roomID +"/"+ type,
     }).then((result) => {
         
         resultUrl = result.url;
@@ -16,4 +18,4 @@ const uploadImage= async (file,roomID,type)=>{
         };
     })
 }
-module.exports = uploadImage;
+module.exports = uploadGroupImage;
